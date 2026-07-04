@@ -86,7 +86,6 @@ int main() {
     merkez.motoruDegistir(xorMotoru);
     merkez.mesajGonder("YTUE CENG Core Engineering");
 
-    // Bellek temizliği (Mühendislik ahlakı kanka, RAM'de çöp bırakmıyoruz)
     delete sezar;
     delete xorMotoru;
 
