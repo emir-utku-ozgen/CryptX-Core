@@ -74,18 +74,15 @@ class GuvenliMesajMerkezi{
 int main() {
     cout << "=== CryptX-Core: Güvenli Mesajlaşma Altyapısı ===" << endl;
     cout << "=================================================" << endl;
-
-    // Motorlarımızı heap bölgesinde oluşturuyoruz kanka
     SifrelemeMotoru* sezar = new SezarMotoru(6);
     SifrelemeMotoru* xorMotoru = new XorMotoru('Y');
 
-    // 1. ADIM: Merkezi Sezar Motoru ile başlatıyoruz (Enjeksiyon)
+
     GuvenliMesajMerkezi merkez(sezar);
     merkez.mesajGonder("YTUE CENG Core Engineering");
 
     cout << "\n-------------------------------------------------" << endl;
 
-    // 2. ADIM: Çalışma zamanında motoru XOR ile değiştiriyoruz!
     merkez.motoruDegistir(xorMotoru);
     merkez.mesajGonder("YTUE CENG Core Engineering");
 
